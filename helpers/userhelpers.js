@@ -12,10 +12,12 @@ module.exports={
             userdata.password=await bcrypt.hash(userdata.password,10);
             db.get().collection(collection.userCollections).insertOne(userdata).then((data)=>{
                 if(data){
+                    console.log("reached data");
                     userinfo.isUserValid=true;
                     userinfo.user=userdata
                     resolve(userinfo)
                 }else{
+                    console.log("reached datafailed");
                     userinfo.isUserValid=false;
                     resolve(userinfo)
                 }
@@ -40,12 +42,12 @@ module.exports={
         console.log(user);
         bcrypt.compare(userdata.password,user.password).then((data)=>{
             if(data){
-
+    console.log("data verified corrctly");
                 userinfo.isUserValid=true;
                 userinfo.user=user;
                 resolve(userinfo)
             }else{
-                console.log('login failed passwordd');
+                console.log(' data is wrong login failed passwordd');
                 userinfo.isUserValid=false;
                 resolve(userinfo)
             }
@@ -60,3 +62,5 @@ module.exports={
     }
 
 }
+
+

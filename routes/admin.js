@@ -7,7 +7,9 @@ const admincontroller=require('../controllers/admin')
 //   res.render('admin/admin-login',{layout:'admin-layout'});
 // });
 
-router.get('/',admincontroller.getlogin)
+router.get('/login',admincontroller.getlogin)
+
+router.get('/',admincontroller.gethome)
 
 
 
@@ -25,7 +27,7 @@ router.post('/signin',admincontroller.postlogin)
 // })
 
 
-
+router.get('/logout',admincontroller.adminlogout)
 
 
 

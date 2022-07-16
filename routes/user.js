@@ -61,4 +61,12 @@ router.get('/logout',usercontroller.userlogout)
 // });
 
 
+
+router.get('/otp',usercontroller.getotp)
+
+
+
+router.post('/otppost',usercontroller.otppost)
+
+
 module.exports = router;
