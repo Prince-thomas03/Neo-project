@@ -22,22 +22,25 @@ const serviceSid='VAc2d65a8e23ea5d72dee42c4c9feffc12'
                         }).then((res)=>{
                             res.valid=true;
                             resolve(res)
-                            console.log(res);
+                            // console.log(res);
                         })
                     })
                 },
                 otpVerify:(otpData,nuData)=>{
                     let resp={}
+
+                    console.log(otpData.otp);
                     return new Promise(async(resolve,reject)=>{
                         await client.verify.services(serviceSid).verificationChecks.create({
                             to:   `+91${nuData.mobile}`,
                             code:otpData.otp
                         }).then((resp)=>{
-                            console.log("verification success");
-                            console.log(resp);
+                            // console.log("verification success");
+                            // console.log(resp);
                             resolve(resp)
                         })
                     })
                 }
 
              }
+             

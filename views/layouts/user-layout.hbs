@@ -6,37 +6,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--===============================================================================================-->
-  <link rel="icon" type="image/png" href="user/images/icons/favicon.png" />
+  <link rel="icon" type="image/png" href="/user/images/icons/favicon.png" />
   <!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="user/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/user/vendor/bootstrap/css/bootstrap.min.css">
   <!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="user/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/user/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
   <!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="user/fonts/iconic/css/material-design-iconic-font.min.css">
+  <link rel="stylesheet" type="text/css" href="/user/fonts/iconic/css/material-design-iconic-font.min.css">
   <!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="user/fonts/linearicons-v1.0.0/icon-font.min.css">
+  <link rel="stylesheet" type="text/css" href="/user/fonts/linearicons-v1.0.0/icon-font.min.css">
   <!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="user/vendor/animate/animate.css">
+  <link rel="stylesheet" type="text/css" href="/user/vendor/animate/animate.css">
   <!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="user/vendor/css-hamburgers/hamburgers.min.css">
+  <link rel="stylesheet" type="text/css" href="/user/vendor/css-hamburgers/hamburgers.min.css">
   <!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="user/vendor/animsition/css/animsition.min.css">
+  <link rel="stylesheet" type="text/css" href="/user/vendor/animsition/css/animsition.min.css">
   <!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="user/vendor/select2/select2.min.css">
+  <link rel="stylesheet" type="text/css" href="/user/vendor/select2/select2.min.css">
   <!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="user/vendor/daterangepicker/daterangepicker.css">
+  <link rel="stylesheet" type="text/css" href="/user/vendor/daterangepicker/daterangepicker.css">
   <!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="user/vendor/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="/user/vendor/slick/slick.css">
   <!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="user/vendor/MagnificPopup/magnific-popup.css">
+  <link rel="stylesheet" type="text/css" href="/user/vendor/MagnificPopup/magnific-popup.css">
   <!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="user/vendor/perfect-scrollbar/perfect-scrollbar.css">
+  <link rel="stylesheet" type="text/css" href="/user/vendor/perfect-scrollbar/perfect-scrollbar.css">
   <!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="user/css/util.css">
-  <link rel="stylesheet" type="text/css" href="user/css/main.css">
+  <link rel="stylesheet" type="text/css" href="/user/css/util.css">
+  <link rel="stylesheet" type="text/css" href="/user/css/main.css">
   <link rel="stylesheet" href="/user/css/login.css">
+  <link rel="stylesheet" href="/user/css/useredit.css">
 
-  {{!-- <link rel="stylesheet" href="/user/css/login.css"> --}}
+   {{!-- user dashboard --}}
+<link rel="stylesheet" href="/user/css/userDashboard.css"> 
+
+  {{!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> --}}
+
+
+  {{!--
+  <link rel="stylesheet" href="/user/css/login.css"> --}}
 
 
   <!--==================================================================================================-->
@@ -48,48 +56,81 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!--===============================================================================================-->
-  {{!-- {{#if login}}
-  <link rel="stylesheet" href="stylesheets/style.css">
 
-  {{/if}} --}}
+  {{!-- ajaz linking --}}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  {{!-- ajaz linking for payment --}}
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<script src="/javascripts/cart.js"></script>
+
+<script src="/javascripts/wishlist.js" ></script>
+{{!-- <script src="/javascripts/checkout.js"></script> --}}
+
+ 
+
+
 </head>
 
 <body>
 
 
+  {{>user-header}}
 
- {{>user-header}}
   {{{body}}}
-  {{!-- {{>user-footer}} --}}
 
 
 
 
-{{!-- user validation --}}
+ {{!-- data Table link --}}
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+
+  <script type="text/javascript" charset="utf8"
+    src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+
 
  
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js" integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-
-          
- {{!-- linking validation with js folder --}}
- <script src="/javascripts/validation.js"></script>
 
 
 
 
+  {{!-- user validation --}}
 
 
-{{!-- valdiation code cdn
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  {{!--
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script> --}}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"
+    integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="text/javascript" charset="utf8"
+    src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
 
 
 
-{{!-- link js validation in public folder --}}
 
-<script src="/javascripts/validation.js"></script> --}}
+  {{!-- linking validation with js folder --}}
+  <script src="/javascripts/validation.js"></script>
+
+
+  
+
+
+
+  {{!-- valdiation code cdn
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+
+  link js validation in public folder --}}
+
+  {{!--
+  <script src="/javascripts/validation.js"></script> --}}
 
 
   <!--=====================================================================================================-->
@@ -107,14 +148,14 @@
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
     crossorigin="anonymous"></script> --}}
   <!--===============================================================================================-->
-  <script src="user/vendor/jquery/jquery-3.2.1.min.js"></script>
+  <script src="/user/vendor/jquery/jquery-3.2.1.min.js"></script>
   <!--===============================================================================================-->
-  <script src="user/vendor/animsition/js/animsition.min.js"></script>
+  <script src="/user/vendor/animsition/js/animsition.min.js"></script>
   <!--===============================================================================================-->
-  <script src="user/vendor/bootstrap/js/popper.js"></script>
-  <script src="user/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/user/vendor/bootstrap/js/popper.js"></script>
+  <script src="/user/vendor/bootstrap/js/bootstrap.min.js"></script>
   <!--===============================================================================================-->
-  <script src="user/vendor/select2/select2.min.js"></script>
+  <script src="/user/vendor/select2/select2.min.js"></script>
   <script>
     $(".js-select2").each(function () {
       $(this).select2({
@@ -124,18 +165,18 @@
     })
   </script>
   <!--===============================================================================================-->
-  <script src="user/vendor/daterangepicker/moment.min.js"></script>
-  <script src="user/vendor/daterangepicker/daterangepicker.js"></script>
+  <script src="/user/vendor/daterangepicker/moment.min.js"></script>
+  <script src="/user/vendor/daterangepicker/daterangepicker.js"></script>
   <!--===============================================================================================-->
-  <script src="user/vendor/slick/slick.min.js"></script>
-  <script src="user/js/slick-custom.js"></script>
+  <script src="/user/vendor/slick/slick.min.js"></script>
+  <script src="/user/js/slick-custom.js"></script>
   <!--===============================================================================================-->
-  <script src="user/vendor/parallax100/parallax100.js"></script>
+  <script src="/user/vendor/parallax100/parallax100.js"></script>
   <script>
     $('.parallax100').parallax100();
   </script>
   <!--===============================================================================================-->
-  <script src="user/vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
+  <script src="/user/vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
   <script>
     $('.gallery-lb').each(function () { // the containers for all your galleries
       $(this).magnificPopup({
@@ -149,9 +190,9 @@
     });
   </script>
   <!--===============================================================================================-->
-  <script src="user/vendor/isotope/isotope.pkgd.min.js"></script>
+  <script src="/user/vendor/isotope/isotope.pkgd.min.js"></script>
   <!--===============================================================================================-->
-  <script src="user/vendor/sweetalert/sweetalert.min.js"></script>
+  <script src="/user/vendor/sweetalert/sweetalert.min.js"></script>
   <script>
     $('.js-addwish-b2').on('click', function (e) {
       e.preventDefault();
@@ -188,7 +229,7 @@
     });
   </script>
   <!--===============================================================================================-->
-  <script src="user/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+  <script src="/user/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
   <script>
     $('.js-pscroll').each(function () {
       $(this).css('position', 'relative');
@@ -205,7 +246,7 @@
     });
   </script>
   <!--===============================================================================================-->
-  <script src="user/js/main.js"></script>
+  <script src="/user/js/main.js"></script>
 
 </body>
 
